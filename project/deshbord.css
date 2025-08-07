@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #fafafa;
+    color: #111827;
+    line-height: 1.5;
+}
+
+/* Header */
+.header {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.5rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.university-logo-image{
+    font-weight: 5rem;
+    height: 4rem;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-circle {
+    width: 4rem;
+    height: 4rem;
+    background-color: #1f2937;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.university-info h1,
+.university-info h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #111827;
+    text-align: right;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logout-btn {
+    background: white;
+    border: 1px solid #d1d5db;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #f9fafb;
+}
+
+.user-avatar {
+    width: 3rem;
+    height: 3rem;
+    background-color: #2563eb;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Layout */
+.main-layout {
+    display: flex;
+    min-height: calc(100vh - 100px);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 320px;
+    background: white;
+    border-right: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    flex-shrink: 0;
+}
+
+.user-profile {
+    margin-bottom: 2rem;
+}
+
+.profile-avatar {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f3f4f6;
+}
+
+.profile-info h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.enrollment {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #6b7280;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.nav-item.active {
+    background-color: #f97316;
+    color: white;
+}
+
+.nav-item i {
+    width: 1.25rem;
+    font-size: 1rem;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 1.5rem;
+    max-width: calc(100vw - 320px);
+    overflow-x: auto;
+}
+
+/* Service Cards */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #f97316;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #fff7ed;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.card i {
+    color: #ea580c;
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.card-content h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.card-content p {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Tables */
+.table-section {
+    margin-bottom: 2rem;
+}
+
+.table-container {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+    background-color: #374151;
+    color: white;
+    padding: 0.75rem 1rem;
+}
+
+.table-header h2 {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.table-content {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    font-size: 0.75rem;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    background-color: #f3f4f6;
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.data-table td {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+}
+
+.data-table tr.alternate {
+    background-color: #f9fafb;
+}
+
+.transaction-id {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+}
+
+/* Status and Action Elements */
+.status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status.completed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status.paid {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.action-link {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.apply-link {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.action-link:hover {
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .main-content {
+        max-width: 100%;
+    }
+    
+    .service-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .header-left,
+    .header-right {
+        justify-content: center;
+    }
+    
+    .university-info h1,
+    .university-info h2 {
+        font-size: 1rem;
+    }
+    
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-content {
+        font-size: 0.625rem;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .sidebar {
+        padding: 1rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .card {
+        padding: 0.75rem;
+    }
+
+}

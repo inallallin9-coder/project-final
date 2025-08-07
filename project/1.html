@@ -1,0 +1,320 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Semester Result
+</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <style>
+        @media (max-width: 1000px) {
+            .chngemob {
+                margin-right: 35px !important;
+                font-size: 18px !important;
+                margin-top: 10px;
+                width: 90% !important;
+            }
+
+            .chngemob1 {
+                font-size: 18px !important;
+            }
+
+            .hdr {
+                float: none !important;
+                margin-right: 0px !important;
+                font-size: 20px !important;
+            }
+        }
+
+
+        @media (max-width: 1000px) {
+            .mrg {
+                margin-left: 300px !important;
+            }
+
+            .imght {
+                height: 45px !important;
+            }
+
+            .chngemob11 {
+                font-size: 11px !important;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .mrg1 {
+                margin-left: 50px !important;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .wid1 {
+                width: 105% !important;
+            }
+        }
+
+        @media print {
+            .no-print {
+                visibility: hidden;
+            }
+        }
+
+        .list-group-item-danger {
+            color: #060505 !important;
+            background-color: transparent;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 4px solid black;
+        }
+
+        .Resulttable {
+            border-spacing: 0;
+            border-collapse: collapse;
+            opacity: 0.8;
+        }
+
+            .Resulttable > th > td {
+                border: 1px solid black;
+                text-align: center;
+                background: white;
+            }
+
+        .list-group-item-danger {
+            color: #a94442;
+            background-color: transparent;
+        }
+    </style>
+    <script>
+        $(window).on('popstate', function (e) {
+            var lastEntry = customHistory.pop();
+            history.pushState(lastEntry.data, lastEntry.title, lastEntry.location);
+            // load the last entry
+        });
+    </script>
+</head>
+<body>
+    <form method="post" action="./SemesterResult.aspx?S=1+SEMESTER&amp;E=NOV-DEC+2023&amp;R=301302223050&amp;T=Regular" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D0E4EB65" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAATYwoVlxKsMJxXAUt3g3c4dZl678pefj9IpBUSwsJSMnuil9tpu4ETvI4kZswakCGYHWvmGuVw914GpsoQKyMCPjHIOeZThneZD2g5DzipAXjyKs4c=" />
+</div>
+        <div>
+            <div id="divResult" class="row">
+                <div class="col-md-12 box-container">
+                    <div class="box-heading">
+                        <h4 class="box-title"></h4>
+                    </div>
+                    <div style="width: 1000px; margin: 20px auto;">
+                        <div>
+                            <input type="submit" name="btnbk" value="Back" id="btnbk" class="btn btn-warning no-print" style="float: right; margin-right: 16px; margin-top: 20px; display: none" />
+                        </div>
+                        <div>
+                            <table cellpadding="0" cellspacing="0" class="nav-justified">
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+
+                                    <td style="width: 100px; text-align: center">
+                                        <img src="university-logo.png" /></td>
+                                    <td style="white-space: nowrap; text-align: center; font-size: 25px; font-weight: bold">CHHATTISGARH SWAMI VIVEKANAND TECHNICAL UNIVERSITY, BHILAI</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center" colspan="2">
+                                        <div class="mrg" style="margin: 0 auto; font-weight: 700; border: 1px solid black; width: 362px; text-align: center; }">TABULATION OF RESULT(TR SHEET)</div>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                        </div>
+                        <hr />
+                        <div class="heading" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: right;">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-2 col-sm-4 col-xs-2 chngemob11">
+                                <label style="line-height: 23px;">STUDENT NAME:</label>
+                                
+                                <br />
+                                <label style="line-height: 23px;">COURSE&nbsp;/&nbsp;BRANCH:</label>
+                                
+                                <br />
+                                <label style="line-height: 23px;">SEM&nbsp;/&nbsp;LEVEL&nbsp;/&nbsp;YEAR:</label>
+                                
+                                <br />
+                                <label style="line-height: 23px;">ROLL NUMBER:</label>
+                                
+                                <br />
+                                <label style="margin-right: 26px;">INSTITUTE NAME:</label>
+                                
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-5 chngemob11">
+                                <span id="NOC" style="line-height: 28px;">AYUSH PRASAD</span>
+                                <br />
+                                <span id="NOEx" style="line-height: 27px;">B Tech Computer Science and Engineering</span>
+                                <br />
+                                <span id="sem" style="line-height: 23px;">1 SEMESTER</span>
+                                <br />
+                                <span id="roll_no" style="line-height: 34px;">301302223050</span>
+                                <br />
+                                <span id="NOI" style="line-height: 30px;">RUNGTA COLLEGE OF ENGINEERING & TECHNOLOGY - BHILAI</span>
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-2 chngemob11">
+                                <label style="line-height: 23px;">FATHER'S NAME:</label>
+                                <br />
+                                <label style="line-height: 23px;">EXAM SESSION:</label>
+                                <br />
+                                <label style="line-height: 23px;">EXAM TYPE:</label>
+                                <br />
+                                <label style="line-height: 23px;">ENROLLMENT No:</label>
+								<span id="lblABC"><br />
+                                <label style="line-height: 23px;">ABC User ID:</label></span>
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-3 chngemob11">
+                                <span id="Fname" style="line-height: 26px;">SHYAM KISHOR PRASAD</span>
+                                <br />
+                                <span id="ext" style="line-height: 23px;">NOV-DEC 2023</span>
+                                <br />
+                                <span id="lblstat" style="line-height: 34px;">Regular</span>
+                                <br />
+                                <span id="enroll" style="line-height: 25px;">CD1664</span>
+								<span id="lblUserId"><br />
+                                <span id="abcid" style="line-height: 25px;">549525917583</span></span>
+                            </div>
+                            <div class="text-center">
+                            </div>
+                        </div>
+                        <table class="table table-bordered table-striped Resulttable">
+                            
+                            <div>
+	<table class="table table-striped table-hover" cellspacing="0" rules="all" border="1" id="GdUnReport" style="border-collapse:collapse;">
+		<tr>
+			<th class="table_04" align="left" scope="col" style="width:5%;">S.No.</th><th scope="col">Code</th><th scope="col">Subject</th><th scope="col">MAX</th><th scope="col">OBT</th><th scope="col">MAX</th><th scope="col">OBT</th><th scope="col">MAX</th><th scope="col">OBT</th><th scope="col">MAX</th><th scope="col">OBT</th><th scope="col">Letter Grade</th><th scope="col">Grade Point</th><th scope="col">Credit Point</th>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            1
+                                        </td><td>A000105(046)</td><td>Value Education</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>10</td><td>10</td><td>10</td><td>10</td><td>A+</td><td>10</td><td>0</td>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            2
+                                        </td><td>A000114(037)</td><td>Engineering Graphics and Design</td><td>100</td><td>69</td><td>20</td><td>13</td><td>30</td><td>29</td><td>150</td><td>111</td><td>B+</td><td>8</td><td>1</td>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            3
+                                        </td><td>A000124(037)</td><td>Engineering Graphics and Design (Lab)</td><td>40</td><td>38</td><td>&nbsp;</td><td>&nbsp;</td><td>20</td><td>20</td><td>60</td><td>58</td><td>A+</td><td>10</td><td>2</td>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            4
+                                        </td><td>A000113(024)</td><td>Basic Electrical and Electronics Engg.</td><td>100</td><td>47</td><td>20</td><td>10</td><td>30</td><td>30</td><td>150</td><td>87</td><td>C+</td><td>6</td><td>3</td>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            5
+                                        </td><td>A000122(024)</td><td>Basic Electrical and Electronics Engg. (Lab)</td><td>40</td><td>39</td><td>&nbsp;</td><td>&nbsp;</td><td>20</td><td>20</td><td>60</td><td>59</td><td>A+</td><td>10</td><td>1</td>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            6
+                                        </td><td>A000123(022)</td><td>Fundamentals of Computer (Lab)</td><td>40</td><td>38</td><td>&nbsp;</td><td>&nbsp;</td><td>20</td><td>19</td><td>60</td><td>57</td><td>A+</td><td>10</td><td>1</td>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            7
+                                        </td><td>A000115(022)</td><td>Fundamentals of Computer</td><td>100</td><td>49</td><td>20</td><td>10</td><td>30</td><td>30</td><td>150</td><td>89</td><td>C+</td><td>6</td><td>2</td>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            8
+                                        </td><td>A000121(015)</td><td>Physics (Lab)</td><td>40</td><td>39</td><td>&nbsp;</td><td>&nbsp;</td><td>20</td><td>20</td><td>60</td><td>59</td><td>A+</td><td>10</td><td>1</td>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            9
+                                        </td><td>A000111(015)</td><td>Physics-I</td><td>100</td><td>35</td><td>20</td><td>12</td><td>30</td><td>30</td><td>150</td><td>77</td><td>C+</td><td>6</td><td>4</td>
+		</tr><tr>
+			<td class="table_02" align="left">
+                                            10
+                                        </td><td>A000112(014)</td><td>Mathematics-I</td><td>100</td><td>26</td><td>20</td><td>7</td><td>30</td><td>30</td><td>150</td><td>63</td><td>FF</td><td>0</td><td>0</td>
+		</tr>
+	</table>
+</div>
+                            
+                        </table>
+                        <hr />
+                        <div class="row" style="width: 1000px; margin: 0 auto;">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                <span id="SPIlbl" style="font-weight: 600;">SPI:</span>
+                                <span id="spi"></span>
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-2" >
+                                <label style="font-weight: 600;">CPI:</label>
+                                <span id="cpivalue" style="display:none"></span>
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                            <div class="col-md-2 col-sm-2 col-xs-2" style="width: 16%;"></div>
+                            <div class="col-md-2 col-sm-2 col-xs-2" style="width: 5%;">
+                                <span id="mxmarks">1000</span>
+                            </div>
+                            <div class="col-md-1 col-sm-2 col-xs-2" style="width: 7%;">
+                                <span id="obtmarks">670</span>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-2">
+                                <span id="rslt" style="font-weight: 600;">RESULT :</span>
+                                <span id="Result" style="font-weight: 600;">Fail</span>
+                            </div>
+                        </div>
+                        <hr style="margin-top: 1px;" />
+                        <div style="width: 1000px; margin: 20px auto;">
+                            <div class="row">
+                                <div style="margin-bottom: 5px">
+                                    <div class="col-md-6">
+                                        <span id="RCREATEON" style="font-weight: 600;"><b>Result Created Date :</b></span>
+                                        &nbsp<span id="rcreateona" style="font-weight: 500;">Jun  6 2024 </span>
+                                        <br />
+                                        <span id="Trdate" style="font-weight: 600;">TR Printed Date :</span>
+                                        &nbsp;<span id="date">07/08/2025</span>
+                                        <br />
+                                        <b style="">This is a Computer Generated Document</b>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    &nbsp&nbsp
+                                <br />
+                                    <img src="signature.jpg" style="margin-top: -16px; margin-right: 89px; height: 34px; float: right" />
+                                    <br />
+                                    <b style="float: right; margin-right: 20px;">Exam Controller Signature</b>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        <br />
+                        <br />
+                    </div>
+
+                    <div class="clearfix">
+                    </div>
+                </div>
+                <div>
+                <input type="submit" name="printButton" value="Print Result" onclick="javascript:window.print();" id="printButton" class="btn btn-success no-print" />
+            &nbsp;
+                <input type="submit" name="btnHome" value="Back to Dashboard" id="btnHome" class="btn btn-primary no-print" />
+                </div>
+                    <br /><br />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
